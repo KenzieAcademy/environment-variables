@@ -10,5 +10,9 @@ services:
       #it is basically saying HEY look for my dockerfile at the base of the application
       context: .
       dockerfile: Dockerfile
+      #how is volumes here different?
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
     ports:
       - '3000:3000'
